@@ -1,0 +1,335 @@
+---
+
+---
+
+<section class="table">
+	<div class="table__header">
+		<div class="table__header-box">
+			<button class="button filter-icon table__header-icon">
+				<span class="tooltip">Filtrar</span>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+					<path
+						d="M12 12V19.88C12.04 20.18 11.94 20.5 11.71 20.71C11.32 21.1 10.69 21.1 10.3 20.71L8.29 18.7C8.06 18.47 7.96 18.16 8 17.87V12H7.97L2.21 4.62C1.87 4.19 1.95 3.56 2.38 3.22C2.57 3.08 2.78 3 3 3H17C17.22 3 17.43 3.08 17.62 3.22C18.05 3.56 18.13 4.19 17.79 4.62L12.03 12H12M17.75 21L15 18L16.16 16.84L17.75 18.43L21.34 14.84L22.5 16.25L17.75 21"
+					></path>
+				</svg>
+			</button>
+		</div>
+	</div>
+	<div class="table__body"></div>
+	<div class="table__footer">
+		<div class="table__footer-box">
+			<div class="table-page-info">
+				1 registro(s), mostrando 1 por página.
+			</div>
+			<div class="buttonPages">
+				<div
+					class="button pagination-button ${this.data.meta.currentPage === 1 ? 'disabled' : ''}"
+					data-page="1"
+				>
+					<span class="tooltip">Principio</span>
+					<svg
+						viewBox="0 0 512 512"
+						version="1.1"
+						xml:space="preserve"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+							id="SVGRepo_tracerCarrier"
+							stroke-linecap="round"
+							stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"
+							><path
+								d="M297.2,478l20.7-21.6L108.7,256L317.9,55.6L297.2,34L65.5,256L297.2,478z M194.1,256L425.8,34l20.7,21.6L237.3,256 l209.2,200.4L425.8,478L194.1,256z"
+							></path></g
+						></svg
+					>
+				</div>
+				<div
+					class="button pagination-button ${this.data.meta.currentPage === 1 ? 'disabled' : ''}"
+					data-page="${this.data.meta.currentPage > 1 ? this.data.meta.currentPage - 1 : 1}"
+				>
+					<span class="tooltip">Anterior</span>
+					<svg
+						version="1.1"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						viewBox="0 0 24 24"
+						xml:space="preserve"
+						transform="matrix(-1, 0, 0, 1, 0, 0)"
+						><g id="SVGRepo_bgCarrier"></g><g
+							id="SVGRepo_tracerCarrier"
+							stroke-linecap="round"
+							stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+							<g id="next">
+								<g>
+									<polygon
+										points="6.8,23.7 5.4,22.3 15.7,12 5.4,1.7 6.8,0.3 18.5,12 "
+									></polygon>
+								</g>
+							</g>
+						</g></svg
+					>
+				</div>
+				<div class="pages">
+					<p>1 / 10</p>
+				</div>
+				<div
+					class="button pagination-button ${this.data.meta.currentPage === this.data.meta.pages ? 'disabled' : ''}"
+					data-page="${this.data.meta.currentPage < this.data.meta.pages ? this.data.meta.currentPage + 1 : this.data.meta.currentPage}"
+				>
+					<span class="tooltip">Siguiente</span>
+					<svg
+						version="1.1"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						viewBox="0 0 24 24"
+						xml:space="preserve"
+						transform="matrix(1, 0, 0, 1, 0, 0)"
+						><g id="SVGRepo_bgCarrier"></g><g
+							id="SVGRepo_tracerCarrier"
+							stroke-linecap="round"
+							stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+							<g id="next">
+								<g>
+									<polygon
+										points="6.8,23.7 5.4,22.3 15.7,12 5.4,1.7 6.8,0.3 18.5,12 "
+									></polygon>
+								</g>
+							</g>
+						</g></svg
+					>
+				</div>
+				<div
+					class="button pagination-button ${this.data.meta.currentPage === this.data.meta.pages ? 'disabled' : ''}"
+					data-page="${this.data.meta.pages}"
+				>
+					<span class="tooltip">Final</span>
+					<svg
+						viewBox="0 0 512 512"
+						version="1.1"
+						xml:space="preserve"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						transform="matrix(-1, 0, 0, 1, 0, 0)"
+						><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g
+							id="SVGRepo_tracerCarrier"
+							stroke-linecap="round"
+							stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"
+							><path
+								d="M297.2,478l20.7-21.6L108.7,256L317.9,55.6L297.2,34L65.5,256L297.2,478z M194.1,256L425.8,34l20.7,21.6L237.3,256 l209.2,200.4L425.8,478L194.1,256z"
+							></path></g
+						></svg
+					>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	* {
+		box-sizing: border-box;
+		font-family: "Nunito Sans", serif;
+		font-optical-sizing: auto;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		margin: 0;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	a,
+	span,
+	li,
+	label,
+	input,
+	button {
+		font-family: "Nunito Sans", serif;
+		font-optical-sizing: auto;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		margin-top: 0;
+	}
+
+	button {
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		outline: none;
+		padding: 0;
+	}
+
+	.table {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.table__header {
+		display: flex;
+		justify-content: flex-start; /* Icono alineado a la izquierda */
+		background-color: hsl(0, 0%, 100%);
+		height: 30px;
+		border-radius: 5px;
+	}
+
+	.table__header-icon {
+		margin-left: 5px;
+	}
+
+	.table__header-icon,
+	.edit-icon,
+	.delete-icon,
+	.clean-icon,
+	.save-icon,
+	.table-page-logo {
+		width: 30px;
+		height: 30px;
+		fill: black;
+	}
+
+	.table__header-icon svg:hover,
+	.edit-icon svg:hover,
+	.delete-icon svg:hover,
+	.table-page-logo {
+		fill: hsl(0, 0%, 25%);
+	}
+
+	.table__body {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		width: 100%;
+		min-height: 75vh;
+		max-height: 75vh;
+		overflow-y: scroll;
+		padding-right: 1rem;
+	}
+
+	.table__body::-webkit-scrollbar {
+		width: 8px; /* ancho del scrollbar */
+	}
+
+	.table__body::-webkit-scrollbar-track {
+		background: #e0e0e0; /* color del fondo de la barra */
+		border-radius: 10px;
+	}
+
+	.table__body::-webkit-scrollbar-thumb {
+		background: hsl(271, 75.8%, 52.9%); /* color azul del "pulgar" */
+		border-radius: 10px;
+	}
+
+	.table__body::-webkit-scrollbar-thumb:hover {
+		background: hsl(271, 75.8%, 52.9%); /* más oscuro al hacer hover */
+	}
+
+	.table__body-box {
+		width: 90%;
+	}
+
+	.table-box__data {
+		padding: 15px;
+		background-color: hsl(0, 0%, 0%);
+		border-radius: 0 0 10px 10px;
+		color: hsl(0, 0%, 100%);
+	}
+
+	.table-box__upper-row {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 10px;
+		background-color: hsl(0, 0%, 100%);
+		border-radius: 10px 10px 0 0;
+	}
+
+	/* Footer de la tabla */
+	.table__footer {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 5px 10px;
+		background-color: hsl(0, 0%, 100%);
+		border-radius: 5px;
+	}
+
+	.table__footer-box {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.table-page-info {
+		text-align: left;
+		color: rgb(0, 0, 0);
+	}
+
+	.pages {
+		align-content: center;
+		justify-items: center;
+	}
+
+	.pagination-button {
+		width: 20px;
+		height: 20px;
+		fill: rgb(0, 0, 0);
+		cursor: pointer;
+	}
+
+	.buttonPages {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+	}
+
+	.pagination-button.disabled {
+		cursor: not-allowed;
+	}
+
+	.pagination-button.disabled svg {
+		fill: hsl(271, 75.8%, 52.9%);
+	}
+
+	.tooltip {
+		position: absolute;
+		background-color: #4f46e5;
+		color: #ffffff;
+		padding: 0.25rem 0.5rem;
+		border-radius: 4px;
+		font-size: 0.875rem;
+		white-space: nowrap;
+		transform: translateY(-120%);
+		margin-bottom: 0.25rem;
+		opacity: 0;
+		transition: opacity 0.2s ease;
+		z-index: 10;
+	}
+
+	.button {
+		position: relative;
+	}
+
+	.button:hover .tooltip {
+		opacity: 1;
+	}
+</style>
