@@ -1,14 +1,19 @@
 {
-  "name": "panel-admin-astro",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
   "dependencies": {
-    "astro": "^5.12.2"
+    "express": "^5",
+    "http-proxy-middleware": "^2.0.6"
+  },
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:client dev:front-customer proxy",
+    "dev:client": "cd client && npm run dev",
+    "dev:front-customer": "cd client && npm run dev",
+    "install": "npm-run-all --parallel install:client install:customer && cd.. && cd api && install:api",
+    "install:client": "cd client && npm install",
+    "install:customer": "cd client && npm install",
+    "install:api": "cd api && npm install",
+    "proxy": "node ./proxy.js"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
   }
 }
